@@ -1,0 +1,134 @@
+header {
+    height: 100vh;
+    padding-top: 7rem;
+    overflow: hidden;
+}
+
+.header__container {
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+.header__maine {
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    gap: 1.2rem;
+    text-align: center;
+}
+
+.my__name {
+    color: #dff6f7;
+}
+
+.btn__contact {
+    margin-top: 0;
+}
+
+/*==========HEADER SOCIALS===========*/
+
+
+.header__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+
+}
+
+.header__socials::after {
+    content: '';
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+}
+
+
+
+
+.header_image img {
+    width: 35rem;
+    position: absolute;
+    left: 40%;
+    transform: translateX(-40%);
+
+
+
+
+
+
+
+}
+
+
+/*==========LOGO===========*/
+.logo {
+    width: 20%;
+    margin-top: -8rem;
+
+
+}
+
+#dark .logo {
+    background-image: url(/src/assets/logo_dark.png);
+}
+
+
+
+
+
+/*==========Scroll Down===========*/
+
+.scroll__down {
+    position: absolute;
+    right: -2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+/*==========Media Queries (MEDIUM DEVICES)==============*/
+@media screen and (max-width: 1024px) {
+
+    header {
+        height: 68vh;
+    }
+
+}
+
+/*==========Media Queries (SMALL DEVICES)==============*/
+@media screen and (max-width: 600px) {
+    header {
+        height: 80vh;
+    }
+
+    .header__socials,
+    .scroll__down {
+        display: none;
+    }
+
+    .logo {
+        width: 35%;
+        align-items: center;
+    }
+
+    .header_image img {
+        width: 25rem;
+    }
+
+    .header__maine {
+
+        grid-template-rows: 1fr 2fr 1fr;
+        gap: 4rem;
+
+
+    }
+
+    .text {
+        font-size: 22px;
+    }
+}
